@@ -1,0 +1,44 @@
+
+///  this frame work provide two funcation
+
+1- for using this framWork just import header file
+                #import <NetworkRequest/NetworkRequest.h>
+
+
+
+//// first func  : ------>
+
+# can render image for imageView (async task ) with indicator for download just by one line
+
+             [imageView setImageWithURL:@"image url string "];
+
+//// secand func  : ------>
+
+# can request your api just http (get, post, delete, patch, put)
+
+like this example :
+
+
+    1- create class
+        GetRemoteData *GetData = [[GetRemoteData alloc] init];
+
+
+
+        [GetData RequestData:(nsdictionary represent headers parameter )
+                bodyParameter:(nsdictionary represent body parameter )
+                urlString:@(String for api url )
+                httpWay: (Http way )
+                responseDelegate:(class for cal back func )
+                responseSelector: @selector(dataRecive:)]; < --- call back func for result
+
+
+2- implement call back func for result of response of api request
+
+
+
+-(void)dataRecive : (NSData *)result{
+
+
+
+
+}
